@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+:root {
+  --background-color: #1B262C;
+  --primary-color: #0F4C75;
+  --secondry-color: #3282B8;
+  --text-color: #BBE1FA;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-color);
+  box-sizing: border-box;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+nav {
+  background-color: tomato;
+}
+
+main {
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  width: 100vh;
+}
+
+.introText {
+  color: white;
+  font-size: 2rem;
+}
+
+.profileImg {
+  height: 25rem;
+  width: 25rem;
+}
+
+.hello {
+  color: white;
+  display: block;
+  width: 2rem;
+}
+
+.im {
+  color: white;
+  display: inline;
+}
+
+#animatedLogo {
+  background-color: #1B262C;
+  animation: fill 0.5s ease forwards 3.5s;
+  display: inline-block;
+  height: 1.75rem;
+  width: 8rem;
+}
+
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: white;
+  }
+}

@@ -1,0 +1,60 @@
+.about {
+  height: 65vh;
+  background-color: $secondryColor;
+  & h1 {
+    font-size: $heading;
+    text-align: center;
+    padding: 1rem;
+    color: $textColor;
+  }
+  &-div {
+    display: flex;
+    &__education {
+      flex: 1;
+      text-align: center;
+      & h2 {
+        padding: 0.1rem;
+        font-size: $h3size;
+        color: $textColor;
+      }
+      &--container {
+        & > div {
+          @include flex-center(row);
+          justify-content: space-around;
+          margin: 2rem;
+        }
+        & p {
+          font-size: $textSize;
+          color: $textColor;
+        }
+      }
+    }
+    &__skills {
+      text-align: center;
+      flex: 1;
+      & h2 {
+        padding: 0.5rem;
+        font-size: $h3size;
+        color: $textColor;
+      }
+      &--images {
+        display: grid;
+        justify-content: center;
+        align-items: stretch;
+        grid-gap: 10px;
+        // grid-auto-flow: column;
+        grid-template-columns: 10vw 10vw 10vw 10vw;
+        grid-auto-rows: 50px;
+        // column-gap: 10px;
+        row-gap: 50px;
+        & > figure {
+          & > img {
+            height: 3rem;
+            width: 3rem;
+          }
+        }
+      }
+    }
+  }
+}
+

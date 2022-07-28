@@ -1,0 +1,34 @@
+nav {
+  @include flex-center(row);
+  justify-content: space-between;
+  background-color: $primaryColor;
+}
+
+.nav__logo {
+  font-size: $heading;
+  // font-family: "Neonderthaw", cursive;
+  font-family: 'Source Code Pro', monospace;
+  color: $textColor;
+  padding: 0.5rem;
+}
+
+.nav__logo:hover {
+  color: white;
+}
+
+.nav__links {
+  color: $textColor;
+  font-size: $textSize;
+  @include flex-center(row);
+  gap: 2rem;
+  padding: 1rem;
+  list-style: none;
+  cursor: pointer;
+}
+.nav__links > li > * {
+  text-decoration: none;
+  color: inherit;
+}
+.nav__links > li > *:hover {
+  color: white;
+}

@@ -1,0 +1,70 @@
+.projects {
+  height: fit-content;
+  background-color: $backgroundColor;
+  & h1 {
+    font-size: $heading;
+    text-align: center;
+    padding: 1rem;
+    color: $textColor;
+  }
+}
+
+.pro1 {
+  @include flex-center(row);
+  justify-content: space-between;
+  & > * {
+    padding: 3.5rem;
+    line-height: 2rem;
+  }
+  &__info {
+    & p {
+      color: $textColor;
+    }
+    & h2 {
+      font-size: $h3size;
+      color: $textColor;
+      text-decoration: underline;
+    }
+    & div img {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+  }
+  & img {
+    height: 30rem;
+    width: 45rem;
+  }
+}
+
+#pro1_link {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-left: 0.3rem;
+}
+
+.pro2 {
+  @include flex-center(row);
+  justify-content: space-between;
+  & > * {
+    padding: 3.5rem;
+    line-height: 2rem;
+  }
+  &__info {
+    & p {
+      color: $textColor;
+    }
+    & h2 {
+      font-size: $h3size;
+      color: $textColor;
+      text-decoration: underline;
+    }
+    & div img {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+  }
+  & img {
+    height: 30rem;
+    width: 45rem;
+  }
+}

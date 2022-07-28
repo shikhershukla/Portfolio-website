@@ -1,0 +1,10 @@
+https://colorhunt.co/palette/1b262c0f4c753282b8bbe1fa
+
+lazy loading
+select color pallet
+writing animation
+// make the navbar better
+
+https://www.youtube.com/watch?v=biOMz4puGt8
+use scroll bar from this
+add left and right margin to body for mordern design

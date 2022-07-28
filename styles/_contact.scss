@@ -1,0 +1,71 @@
+.contact {
+  height: fit-content;
+  background-color: $secondryColor;
+  text-align: center;
+  padding: 2rem;
+  color: $textColor;
+  & h1 {
+    margin-bottom: 1rem;
+    font-size: $heading;
+  }
+  &-div {
+    display: flex;
+    align-items: center;
+    &__info {
+      flex: 1;
+      text-align: left;
+      font-size: $textSize;
+      &__imgs img {
+        height: 3rem;
+        width: 3rem;
+        &:hover {
+            height: 2.5rem;
+            width: 2.5rem;
+            transform: rotateZ(10deg);
+            transition-duration: 1s;
+        }
+      }
+    }
+    &__formContainer {
+      flex: 1;
+      & h2 {
+        font-size: $h2size;
+        margin-bottom: 1rem;
+      }
+      ::placeholder {
+        color: grey;
+      }
+      & form {
+        & input,
+        textarea {
+          font-size: $textSize;
+          margin: 0.3rem 0;
+          border: none;
+          padding: 0.2rem;
+          border-radius: 0.5rem;
+        }
+        .name {
+          width: 40%;
+        }
+        .email {
+          width: 40%;
+        }
+        .subject {
+          width: 80%;
+        }
+        .message {
+          width: 80%;
+          height: 5rem;
+        }
+      }
+      & button {
+        border: none;
+        border-radius: 0.4rem;
+        padding: 0.8rem;
+        background-color: $primaryColor;
+        color: $textColor;
+        font-size: $textSize;
+      }
+    }
+  }
+}
