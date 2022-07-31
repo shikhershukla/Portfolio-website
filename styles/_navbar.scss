@@ -1,15 +1,19 @@
 nav {
   @include flex-center(row);
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: $primaryColor;
+  padding: 0rem 4%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 4;
 }
 
 .nav__logo {
   font-size: $heading;
-  // font-family: "Neonderthaw", cursive;
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Neonderthaw", cursive;
+  // font-family: "Source Code Pro", monospace;
   color: $textColor;
-  padding: 0.5rem;
 }
 
 .nav__logo:hover {
@@ -20,10 +24,11 @@ nav {
   color: $textColor;
   font-size: $textSize;
   @include flex-center(row);
-  gap: 2rem;
+  gap: 5rem;
   padding: 1rem;
   list-style: none;
   cursor: pointer;
+  padding-right: 5rem;
 }
 .nav__links > li > * {
   text-decoration: none;
@@ -31,4 +36,30 @@ nav {
 }
 .nav__links > li > *:hover {
   color: white;
+}
+
+.nav__resume {
+  color: $textColor;
+  background-image: linear-gradient(
+    to right,
+    $secondryColor 0%,
+    #ffabf4 50%,
+    $secondryColor 100%
+  );
+  background-size: 300% 300%;
+  transition: 0.5s;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  & img {
+    height: 0.9rem;
+    width: 1.2rem;
+    padding-right: 0.5rem;
+    margin-bottom: -0.1rem;
+  }
+}
+
+.nav__resume:hover {
+  background-position: right center;
 }

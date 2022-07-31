@@ -36,17 +36,20 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   background-color: #0f4c75;
+  padding: 0rem 4%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 4;
 }
 
 .nav__logo {
   font-size: 3rem;
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Neonderthaw", cursive;
   color: #bbe1fa;
-  padding: 0.5rem;
 }
 
 .nav__logo:hover {
@@ -69,10 +72,11 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 2rem;
+  gap: 5rem;
   padding: 1rem;
   list-style: none;
   cursor: pointer;
+  padding-right: 5rem;
 }
 
 .nav__links > li > * {
@@ -82,6 +86,30 @@ nav {
 
 .nav__links > li > *:hover {
   color: white;
+}
+
+.nav__resume {
+  color: #bbe1fa;
+  background-image: -webkit-gradient(linear, left top, right top, from(#3282b8), color-stop(50%, #ffabf4), to(#3282b8));
+  background-image: linear-gradient(to right, #3282b8 0%, #ffabf4 50%, #3282b8 100%);
+  background-size: 300% 300%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.nav__resume img {
+  height: 0.9rem;
+  width: 1.2rem;
+  padding-right: 0.5rem;
+  margin-bottom: -0.1rem;
+}
+
+.nav__resume:hover {
+  background-position: right center;
 }
 
 main {
@@ -405,12 +433,8 @@ main {
 }
 
 .contact-div__info__imgs img:hover {
-  height: 2.5rem;
-  width: 2.5rem;
-  -webkit-transform: rotateZ(10deg);
-          transform: rotateZ(10deg);
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
+  -webkit-animation: shake 0.3s linear 1;
+          animation: shake 0.3s linear 1;
 }
 
 .contact-div__formContainer {
@@ -422,6 +446,7 @@ main {
 .contact-div__formContainer h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  text-decoration: underline;
 }
 
 .contact-div__formContainer ::-webkit-input-placeholder {
@@ -473,5 +498,42 @@ main {
   background-color: #0f4c75;
   color: #bbe1fa;
   font-size: 1.25rem;
+  cursor: pointer;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.contact-div__formContainer button:hover {
+  background-color: #03304f;
+}
+
+@-webkit-keyframes shake {
+  33% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  66% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+}
+
+@keyframes shake {
+  33% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  66% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
 }
 /*# sourceMappingURL=styles.css.map */
