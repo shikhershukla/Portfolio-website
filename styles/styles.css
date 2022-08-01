@@ -427,14 +427,55 @@ main {
   font-size: 1.25rem;
 }
 
-.contact-div__info__imgs img {
-  height: 3rem;
-  width: 3rem;
+.contact-div__info__imgs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
 }
 
-.contact-div__info__imgs img:hover {
-  -webkit-animation: shake 0.3s linear 1;
-          animation: shake 0.3s linear 1;
+.contact-div__info__imgs .icon {
+  width: 4rem;
+  height: 4rem;
+  background-color: white;
+  margin: 0.2rem;
+  border-radius: 30%;
+  color: #3282b8;
+  border: none;
+  -webkit-box-shadow: 0 5px 15px -5px #00000070;
+          box-shadow: 0 5px 15px -5px #00000070;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-div__info__imgs .icon i {
+  line-height: 4rem;
+  font-size: 2rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.contact-div__info__imgs .icon:before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background-color: #0f4c75;
+  left: -110%;
+  top: 90%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.contact-div__info__imgs .icon:hover i {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  color: white;
+}
+
+.contact-div__info__imgs .icon:hover:before {
+  -webkit-animation: animation 0.7s 1 forwards;
+          animation: animation 0.7s 1 forwards;
 }
 
 .contact-div__formContainer {
@@ -507,33 +548,33 @@ main {
   background-color: #03304f;
 }
 
-@-webkit-keyframes shake {
-  33% {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
+@-webkit-keyframes animation {
+  0% {
+    left: -110%;
+    top: 90%;
   }
-  66% {
-    -webkit-transform: rotate(-10deg);
-            transform: rotate(-10deg);
+  80% {
+    left: 13%;
+    top: -30%;
   }
   100% {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
+    left: -10%;
+    top: -10%;
   }
 }
 
-@keyframes shake {
-  33% {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
+@keyframes animation {
+  0% {
+    left: -110%;
+    top: 90%;
   }
-  66% {
-    -webkit-transform: rotate(-10deg);
-            transform: rotate(-10deg);
+  80% {
+    left: 13%;
+    top: -30%;
   }
   100% {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
+    left: -10%;
+    top: -10%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
