@@ -3,6 +3,7 @@ main {
   margin: 2rem;
   gap: 5%;
   transform: translateX(-8rem);
+  padding-top: 5rem;
 }
 
 .introSec {
@@ -21,10 +22,14 @@ main {
 }
 
 .profileImg {
-  height: 25rem;
+  height: 30rem;
   width: 25rem;
   margin: 0 10rem;
   flex: 1;
+  border-radius: 10rem 10rem 1rem 1rem;
+  background-image: linear-gradient(to bottom, $primaryColor, #808080);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #animatedLogo {

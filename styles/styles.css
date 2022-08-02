@@ -130,6 +130,7 @@ main {
   gap: 5%;
   -webkit-transform: translateX(-8rem);
           transform: translateX(-8rem);
+  padding-top: 5rem;
 }
 
 .introSec {
@@ -150,12 +151,17 @@ main {
 }
 
 .profileImg {
-  height: 25rem;
+  height: 30rem;
   width: 25rem;
   margin: 0 10rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  border-radius: 10rem 10rem 1rem 1rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0f4c75), to(#808080));
+  background-image: linear-gradient(to bottom, #0f4c75, #808080);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #animatedLogo {
